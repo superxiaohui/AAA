@@ -14,14 +14,13 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MongoConfig {
 
-    @Value("${spring.date.mongodb.database}")
+    @Value("${spring.data.mongodb.database}")
     String db;
-
 
     @Bean
     public GridFSBucket getGridFSBucket(MongoClient mongoClient){
 
-        //6GridFSBucket用于打开下载流对象
+        //GridFSBucket用于打开下载流对象
         MongoDatabase database = mongoClient.getDatabase(db);
         GridFSBucket bucket = GridFSBuckets.create(database);
         return bucket;

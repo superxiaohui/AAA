@@ -17,6 +17,7 @@ import java.io.Serializable;
 @GenericGenerator(name = "jpa-uuid", strategy = "uuid")
 public class Teachplan implements Serializable {
     private static final long serialVersionUID = -916357110051689485L;
+
     @Id
     @GeneratedValue(generator = "jpa-uuid")
     @Column(length = 32)

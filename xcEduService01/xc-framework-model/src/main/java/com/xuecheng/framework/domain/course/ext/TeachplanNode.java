@@ -7,7 +7,7 @@ import lombok.ToString;
 import java.util.List;
 
 /**
- * Created by admin on 2018/2/7.
+ * 自定义课程计划结点类
  */
 @Data
 @ToString

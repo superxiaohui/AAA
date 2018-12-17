@@ -1,5 +1,6 @@
 package com.xuecheng.framework.exception;
 
+import com.google.common.base.Throwables;
 import com.google.common.collect.ImmutableMap;
 import com.xuecheng.framework.model.response.CommonCode;
 import com.xuecheng.framework.model.response.ResponseResult;
@@ -48,7 +49,8 @@ public class ExceptionCatch {
     @ResponseBody   //将返回json数据到前台界面
     public ResponseResult catchError(Exception exception){
         //记录日志
-        LOGGER.error(String.valueOf(new Date())+"--catch One Exception:"+exception.getMessage());
+        LOGGER.error(String.valueOf(new Date())+"--catch One Exception:"+exception.getMessage()+"Message："+Throwables.getStackTraceAsString(exception));
+
 
         //构建错误集合
         if(EXCEPTIONS==null){

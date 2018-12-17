@@ -1,9 +1,6 @@
 package com.xuecheng.framework.domain.cms;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -20,6 +17,7 @@ import java.util.List;
 @Data
 @ToString
 @Document(collection = "cms_site")
+@NoArgsConstructor
 public class CmsSite {
 
     //站点ID
@@ -35,5 +33,8 @@ public class CmsSite {
     private String siteWebPath;
     //创建时间
     private Date siteCreateTime;
+    //物理路径
+    private String sitePhysicalPath;
+
 
 }

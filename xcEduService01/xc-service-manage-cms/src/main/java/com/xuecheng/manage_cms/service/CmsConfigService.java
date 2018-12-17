@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 /**
- * 页面模型数据持久层
+ * 页面模型数据业务层
  */
 @Service
 public class CmsConfigService {
